@@ -1,2 +1,25 @@
 # template_gfx_project
-A base C++ project with all the usual libs needed to create games, engines, tools, libs...
+
+`template_gfx_project` is a foundational project set up to facilitate OpenGL and ImGui integration. The purpose of this project is to provide a boilerplate codebase for developers who want to start a graphical application with the capabilities of OpenGL for rendering and ImGui for graphical user interfaces.
+
+![Project Image](./github/picture.PNG)
+
+## Dependencies
+
+The project relies on the following libraries:
+
+- **glad:** Provides the source code to handle OpenGL function pointers.
+- **SDL2:** Used for creating a window, OpenGL context, and handling input.
+- **ImGui:** An immediate-mode GUI library to create interfaces within the OpenGL context.
+
+## Building the Project
+
+The project uses CMake as its build system. Here are the steps to compile the project:
+````sh
+    mkdir build
+    cd build
+    cmake ..
+    cmake --build .
+```
+
+
