@@ -8,9 +8,9 @@
 
 The project relies on the following libraries:
 
-- **glad:** Provides the source code to handle OpenGL function pointers.
-- **SDL2:** Used for creating a window, OpenGL context, and handling input.
-- **ImGui:** An immediate-mode GUI library to create interfaces within the OpenGL context.
+- **[glad](https://glad.dav1d.de/):** Provides the source code to handle OpenGL function pointers.
+- **[SDL2](https://github.com/libsdl-org/SDL):** Used for creating a window, OpenGL context, and handling input.
+- **[ImGui](https://github.com/ocornut/imgui):** An immediate-mode GUI library to create interfaces within the OpenGL context.
 
 ## Building the Project
 
