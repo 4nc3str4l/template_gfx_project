@@ -1,6 +1,8 @@
 # template_gfx_project
 
-`template_gfx_project` is a foundational project set up to facilitate OpenGL and ImGui integration. The purpose of this project is to provide a boilerplate codebase for developers who want to start a graphical application with the capabilities of OpenGL for rendering and ImGui for graphical user interfaces.
+`template_gfx_project` serves as a foundational project designed for seamless integration of OpenGL and ImGui. Its primary objective is to offer a boilerplate codebase for developers looking to initiate a graphical application harnessing OpenGL for rendering and ImGui for graphical user interfaces.
+
+While it's feasible to structure this as a library, allowing users to simply embed logic within `Update()`, `Render()`, and `RenderIMGUI()` functions, that is not the intent of this project. The primary goal is to ensure everything is set up and operational whenever I wish to create a new application utilizing these libraries as I allways find myself loosing 1h to setup everything.
 
 ![Project Image](./github/picture.PNG)
 
