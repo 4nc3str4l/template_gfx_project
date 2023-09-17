@@ -4,7 +4,7 @@
 
 While it's feasible to structure this as a library, allowing users to simply embed logic within `Update()`, `Render()`, and `RenderIMGUI()` functions, that is not the intent of this project. The primary goal is to ensure everything is set up and operational whenever I wish to create a new application utilizing these libraries as I allways find myself loosing 1h to setup everything.
 
-![Project Image](./github/picture.PNG)
+![Project Image](https://github.com/4nc3str4l/template_gfx_project/blob/06d42e3d773e219da7880ee1d773a60967a17b5d/github/picture.PNG)
 
 ## Dependencies
 
