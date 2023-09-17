@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.10) 
 
-project(template_gfx_project)
+set(PROJECT_NAME_VAR "template_gfx_project")
+
+project(${PROJECT_NAME_VAR})
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -40,13 +42,17 @@ include_directories(${GLAD_INCLUDE_DIR})
 file(GLOB IMGUI_SOURCES ${CMAKE_SOURCE_DIR}/libs/imgui/*.cpp)
 file(GLOB IMGUI_HEADERS ${CMAKE_SOURCE_DIR}/libs/imgui/*.h)
 
-
 ############################################################
 #                         EXECUTABLE                       #
 ############################################################
 
-add_executable(template_gfx_project 
-    main.cpp
+file(GLOB SOURCES
+     src/*.cpp
+     src/*.h
+)
+
+add_executable(${PROJECT_NAME_VAR} 
+    ${SOURCES}
     ${GLAD_SOURCES}
     ${IMGUI_SOURCES}
     ${IMGUI_HEADERS}
@@ -55,17 +61,17 @@ add_executable(template_gfx_project
 ############################################################
 #                         LINKING                          #
 ############################################################
-target_link_libraries(template_gfx_project ${SDL2_LIBRARIES} SDL2main SDL2)
+target_link_libraries(${PROJECT_NAME_VAR} ${SDL2_LIBRARIES} SDL2main SDL2)
 
 ############################################################
 #                         COPY DLL                         #
 ############################################################
 if(WIN32)
-    set_target_properties(template_gfx_project PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/build")
+    set_target_properties(${PROJECT_NAME_VAR} PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/build")
 
-    add_custom_command(TARGET template_gfx_project POST_BUILD COMMAND
+    add_custom_command(TARGET ${PROJECT_NAME_VAR} POST_BUILD COMMAND
         ${CMAKE_COMMAND} -E copy_if_different
         ${SDL2_DLL}
-        $<TARGET_FILE_DIR:template_gfx_project>
+        $<TARGET_FILE_DIR:${PROJECT_NAME_VAR}>
     )
 endif()
