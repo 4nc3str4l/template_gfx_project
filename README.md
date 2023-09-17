@@ -16,8 +16,8 @@ The project relies on the following libraries:
 
 The project uses CMake as its build system. Here are the steps to compile the project:
 ```sh
-    mkdir build
-    cd build
-    cmake ..
-    cmake --build .
+mkdir build
+cd build
+cmake ..
+cmake --build .
 ```
